@@ -1,11 +1,13 @@
 package com.latam.birthday.mvp.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -16,6 +18,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Component
+@ToString
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
 
     private String name;
