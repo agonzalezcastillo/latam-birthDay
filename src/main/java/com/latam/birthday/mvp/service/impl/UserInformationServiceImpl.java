@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.Charset;
+
 @Service
 @AllArgsConstructor
 public class UserInformationServiceImpl implements UserInformationService {
