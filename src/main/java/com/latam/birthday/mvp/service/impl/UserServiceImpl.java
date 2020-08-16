@@ -1,5 +1,6 @@
 package com.latam.birthday.mvp.service.impl;
 
+import com.latam.birthday.mvp.exception.InvalidNameException;
 import com.latam.birthday.mvp.helper.PoemMapperHelper;
 import com.latam.birthday.mvp.helper.RandomNumberHelper;
 import com.latam.birthday.mvp.httpClient.PoemClient;
@@ -32,7 +33,7 @@ public class UserServiceImpl implements UserService {
                 userName.append(" ");
                 userName.append(arrName.get(2));
             }else{
-                throw new Exception();
+                throw new InvalidNameException("Imcomplete name");
             }
         }
         return userName.toString();

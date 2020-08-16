@@ -13,19 +13,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.Date;
-
 @Controller
 @AllArgsConstructor
 @RequestMapping("")
 public class BirthdayController {
 
-    private UserService userService;
     private UserInformationService userInformationService;
 
     @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(value = "/birthday", consumes = "application/json", produces = "application/json",  method = RequestMethod.POST)
-    public ResponseEntity<User> getDaysToBirthDay(@Validated @RequestBody User user) throws Exception {
+    public ResponseEntity<User> daysToBirthDay(@Validated @RequestBody User user) throws Exception {
 
         User userInfo = userInformationService.getUserInformation(user);
 

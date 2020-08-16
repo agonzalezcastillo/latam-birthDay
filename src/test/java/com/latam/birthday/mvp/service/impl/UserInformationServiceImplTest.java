@@ -59,7 +59,9 @@ public class UserInformationServiceImplTest {
         when(userService.getuserName(any())).thenReturn("alejandro gonzalez");
         when(userService.getUserDaysToBirthday(any())).thenReturn(300L);
         when(userService.getRandomPoem()).thenReturn(poem);
+
         User userInfo = userInformationService.getUserInformation(user);
+
         verify(userService).getUserAge(any());
         verify(userService).getuserName(any());
         verify(userService).getRandomPoem();

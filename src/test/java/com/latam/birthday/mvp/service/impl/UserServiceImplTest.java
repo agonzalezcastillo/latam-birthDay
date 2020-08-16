@@ -1,5 +1,6 @@
 package com.latam.birthday.mvp.service.impl;
 
+import com.latam.birthday.mvp.exception.InvalidNameException;
 import com.latam.birthday.mvp.helper.PoemMapperHelper;
 import com.latam.birthday.mvp.helper.RandomNumberHelper;
 import com.latam.birthday.mvp.httpClient.PoemClient;
@@ -166,7 +167,7 @@ public class UserServiceImplTest {
         assertEquals("alejandro gonzalez", pName);
     }
 
-    @Test(expected = Exception.class)
+    @Test(expected = InvalidNameException.class)
     public void getUserNameNOK() throws Exception {
         userService.getuserName(wrongName);
     }
