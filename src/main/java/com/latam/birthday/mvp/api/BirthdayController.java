@@ -21,7 +21,7 @@ public class BirthdayController {
     private UserInformationService userInformationService;
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping(value = "/birthday", consumes = "application/json", produces = "application/json",  method = RequestMethod.POST)
+    @RequestMapping(value = "/birthday", consumes = "application/json", produces = "application/json",  method = RequestMethod.GET)
     public ResponseEntity<User> daysToBirthDay(@Validated @RequestBody User user) throws Exception {
 
         User userInfo = userInformationService.getUserInformation(user);
