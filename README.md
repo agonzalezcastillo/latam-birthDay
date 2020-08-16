@@ -16,7 +16,7 @@ $ gradlew bootRun
 
 3.- Verificar correcto funcionamiento del Servicio
 ```sh
-[GET] localhost:8080/birthday
+[POST] localhost:8080/birthday
 ```
 Payload: ejemplo de json de consulta
 ```sh

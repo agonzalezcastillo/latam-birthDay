@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
                 userName.append(" ");
                 userName.append(arrName.get(2));
             }else{
-                throw new InvalidNameException("Imcomplete name");
+                throw new InvalidNameException("Incomplete name");
             }
         }
         return userName.toString();
